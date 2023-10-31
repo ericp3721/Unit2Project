@@ -31,11 +31,12 @@ public class LinearEquationLogic {
                 System.out.print("Do you want to calculate another line? (yes/no): ");
                 repeat = scanner.nextLine();
             }else{
-                System.out.println("The points are on a vertical line: " + x1);
+                System.out.println("The points are on a vertical line: x = " + x1);
                 System.out.print("Do you want to calculate another line? (yes/no): ");
                 repeat = scanner.nextLine();
             }
         }
+        System.out.println("Thank you for using the slope calculator, goodbye!");
     }
     private LinearEquation inputs() {
         System.out.print("Enter coordinate 1: ");
