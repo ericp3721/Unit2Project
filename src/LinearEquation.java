@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-
 public class LinearEquation {
     private int x1;
     private int x2;
@@ -12,7 +10,7 @@ public class LinearEquation {
         this.y2 = y2;
     }
     public double distance() {
-        return Math.round(Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2) * 100.0) / 100.0);
+        return (Math.round(Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)) * 100.0) / 100.0);
     }
 
     public double yIntercept() {
