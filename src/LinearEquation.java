@@ -9,20 +9,24 @@ public class LinearEquation {
         this.x2 = x2;
         this.y2 = y2;
     }
+    private double roundedToHundredth(double toRound){
+        double rounded = Math.round(toRound * 100) / 100.0;
+        return rounded;
+    }
     public double distance() {
-        return (Math.round(Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)) * 100.0) / 100.0);
+        return roundedToHundredth((Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))));
     }
 
     public double yIntercept() {
-        return Math.round((double)(x2 * y1 - x1 * y2) / (x2 - x1) * 100.0) / 100.0;
+        return roundedToHundredth((double)(x2 * y1 - x1 * y2) / (x2 - x1));
     }
     public double slope() {
-        return Math.round((double) (y2 - y1) / (x2 - x1) * 100.0) / 100.0;
+        return roundedToHundredth((double) (y2 - y1) / (x2 - x1));
     }
     public String equation() {
-        double real_slope =  Math.round((double) (y2 - y1) / (x2 - x1) * 100.0) / 100.0;
+        double real_slope =  roundedToHundredth((double) (y2 - y1) / (x2 - x1));
         double slope1 = (double) (y2 - y1);
-        double slope2 = ((x2 - x1) * 100.0) / 100.0;
+        double slope2 = roundedToHundredth((x2 - x1));
         String slope = slope1 + "/" + slope2;
         double yIntercept = yIntercept();
         if (real_slope == 1) {
